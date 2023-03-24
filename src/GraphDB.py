@@ -32,14 +32,14 @@ class Neo4jConnection:
 
 class File:
     
-    def __init__(self, name: str, date_created, date_modified, file_format):
+    def __init__(self, name: str, date_created, date_modified, file_format, type="Files"):
         
         self.properties = {}
         self.properties['name'] = name
         self.properties['date_created'] = date_created
         self.properties['date_modified'] = date_modified
         self.properties['file_format'] = file_format
-        self.type = "Files"
+        self.type = type
         self.Help = Helper()
         
     def getProperties(self):
@@ -49,12 +49,12 @@ class File:
         
 class Keyword:
     
-    def __init__(self, name, relationship):
+    def __init__(self, name, relationship, type="Keywords"):
         
         self.properties = {}
         self.properties['name'] = name
         self.relationship = relationship
-        self.type = 'Keywords'
+        self.type = type
         self.Help = Helper()
         
     def getProperties(self):

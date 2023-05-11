@@ -1,6 +1,6 @@
 To Activate Environment:
 
     python3 -m venv env          
-    source env/bin/activate
+    source venv/bin/activate
 
     NEO4J-HOME % bin/neo4j start
